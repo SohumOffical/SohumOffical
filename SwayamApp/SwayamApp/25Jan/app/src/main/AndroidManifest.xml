@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sngs.swayam.business">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        tools:replace="android:allowBackup"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.NotificationActivity"/>
+        <activity android:name=".activity.EditProfileActivity" />
+        <activity android:name=".activity.PromotionDetailActivity" />
+        <activity android:name=".activity.PromotionManagementActivity" />
+        <activity android:name=".activity.State_City_List_Activity" />
+        <activity android:name=".activity.UploadFileActivity" />
+        <activity android:name=".activity.MoreSubCatogoryActivity" />
+        <activity android:name=".activity.SelectServiceAreaActivity" />
+        <activity android:name=".users.ChooseRoleActivity" />
+        <activity android:name=".SplshScreenActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".users.VerificationActivity" />
+        <activity android:name=".users.SignupActivity" />
+        <activity android:name=".activity.BusinessDetailsActivity" />
+        <activity android:name=".activity.ProfileDetailActivity" />
+        <activity android:name=".activity.ServicesProvidersActivity" />
+        <activity android:name=".activity.SubServiceCategoryActivity" />
+        <activity android:name=".activity.SelectLocalityActivity" />
+        <activity android:name=".activity.AdditionalDetailsActivity" />
+        <activity
+            android:name="droidninja.filepicker.FilePickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="droidninja.filepicker.MediaDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".users.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.imageprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

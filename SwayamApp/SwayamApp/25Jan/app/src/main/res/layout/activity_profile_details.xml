@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.ProfileDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:elevation="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/textHeader"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/lbl_contact_details"
+            android:textColor="@color/textHeader"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/seller_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_rel2"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_minus30sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/user_rel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/cardContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/app_shadoe">
+
+
+                    <TextView
+                        android:id="@+id/name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:paddingLeft="@dimen/_25sdp"
+                        android:paddingRight="@dimen/_25sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/lbl_ima" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/profile_rel2"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img2"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/ic_new_user"
+                android:tint="@color/colorPrimary"
+                android:padding="@dimen/_10sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_circle_shape"/>
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_camera"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                android:background="@drawable/circle_with_stoke"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+   <LinearLayout
+       android:id="@+id/select_user_type"
+       android:layout_width="wrap_content"
+       android:layout_height="@dimen/_50sdp"
+       android:orientation="horizontal"
+       android:layout_below="@+id/profile_rel"
+       android:paddingLeft="@dimen/_10sdp"
+       android:paddingRight="@dimen/_10sdp"
+       android:layout_centerHorizontal="true">
+
+       <TextView
+           android:id="@+id/btncompany"
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/_30sdp"
+           android:background="@drawable/contact_shape"
+           android:fontFamily="@font/roboto_medium"
+           android:shadowColor="@color/blue"
+           android:gravity="center"
+           android:layout_gravity="center_vertical"
+           android:text="@string/lbl_company"
+           android:textColor="@color/white"
+           android:textSize="@dimen/text_14"
+           android:paddingLeft="@dimen/_20sdp"
+           android:paddingRight="@dimen/_20sdp"/>
+
+       <TextView
+           android:id="@+id/btnindividual"
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/_30sdp"
+           android:background="@drawable/contact_shape_deselected"
+           android:fontFamily="@font/roboto_medium"
+           android:shadowColor="@color/blue"
+           android:gravity="center"
+           android:layout_gravity="center_vertical"
+           android:text="@string/lbl_individual"
+           android:textColor="@color/black"
+           android:textSize="@dimen/text_14"
+           android:layout_marginLeft="@dimen/_10sdp"
+           android:paddingLeft="@dimen/_20sdp"
+           android:paddingRight="@dimen/_20sdp"/>
+
+
+   </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/next_img"
+        android:layout_below="@+id/select_user_type">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            //Name
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_Name"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Alternet Mobile Number
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_alt_mobile"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/alt_mobile"
+                android:layout_below="@+id/tl_Name"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_tl_alt_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/blue"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Email Id
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_email"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:layout_below="@+id/tl_alt_mobile"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Address Line 1
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_address_line_1"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_address_line1"
+                android:layout_below="@+id/tl_email"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address_line_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Address Line 2
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_address_line_2"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_address_line2"
+                android:layout_below="@+id/tl_address_line_1"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address_line_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //State
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_state"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_state"
+                android:layout_below="@+id/tl_address_line_2"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Cities
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_cities"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_Cities"
+                android:layout_below="@+id/tl_state"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_cities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Service Area
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_service_area"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_service_area"
+                android:layout_below="@+id/tl_state"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_service_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //pincode
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_pincode"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_pincode"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/blue"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            //employe_code
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_employe_code"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_employe_code"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_employe_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textAllCaps="true"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ImageView
+        android:id="@+id/next_img"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/bg_circle_shape"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="@dimen/_8sdp"
+        android:rotation="180"
+        android:tint="@color/white"
+        android:elevation="@dimen/_5sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@drawable/ic_back_arrow" />
+
+    <include layout="@layout/loading_layout"/>
+
+</RelativeLayout>

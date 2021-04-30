@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/swyam_logo_part1"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:background="@drawable/bg_circle_shape"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_toEndOf="@id/ivType"
+        android:layout_alignTop="@id/ivType"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/text_16"
+        android:text="New Customers"
+        />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_toEndOf="@id/ivType"
+        android:layout_alignBottom="@id/ivType"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:textColor="@color/textChild"
+        android:textSize="@dimen/_12sdp"
+        android:singleLine="true"
+        android:text="New customer Added in Swayam" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_below="@id/ivType"
+        android:background="@color/colorPrimary"/>
+
+</RelativeLayout>

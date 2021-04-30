@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_promotion_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.PromotionManagementActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:elevation="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/textHeader"/>
+
+        <EditText
+            android:id="@+id/serach_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/contact_shape_black_deselected"
+            android:fontFamily="@font/roboto_regular"
+            android:singleLine="true"
+            android:text=""
+            android:layout_toRightOf="@+id/ivBack"
+            android:drawableLeft="@drawable/ic_serach"
+            android:drawablePadding="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14"
+            android:layout_margin="@dimen/_8sdp"/>
+
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/shop_detail_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/product_cv"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        app:cardCornerRadius="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/shop_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/shop_img"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/product_cv"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/pro_shop_name_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Shri Super Market"
+                            android:textColor="@color/textHeader"
+                            android:textSize="@dimen/text_14"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/pro_shop_detail_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:layout_below="@+id/pro_shop_name_txt"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="B-101, Anand Square, Tragad"
+                            android:textColor="@color/textChild"
+                            android:textSize="@dimen/text_12"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rating_rel"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_below="@+id/pro_shop_detail_txt"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/rate_value_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:singleLine="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="0"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_16" />
+
+                            <RatingBar
+                                android:id="@+id/rate_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:numStars = "5"
+                                android:rating   = "0"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_toRightOf="@+id/rate_value_txt"
+                                style="?android:attr/ratingBarStyleSmall" />
+
+                            <TextView
+                                android:id="@+id/vote_value_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:singleLine="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="0 Ratings"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_toRightOf="@+id/rate_value"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/textChild"
+                                android:textSize="@dimen/text_12" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/verified_rel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_below="@+id/rating_rel"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/swyam_logo_part1"/>
+
+                            <TextView
+                                android:id="@+id/verified_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:singleLine="true"
+                                android:gravity="center_vertical"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="verified"
+                                android:textColor="@color/textHeader"
+                                android:textSize="@dimen/text_12" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_below="@+id/shop_detail_rel"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/call_now_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/call_now_drawble"
+                        android:layout_marginRight="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/call_now_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/call_now"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_12" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/view_more_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@drawable/view_more_drawble">
+
+                        <TextView
+                            android:id="@+id/view_more_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/view"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_12" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.naimee.swayam.utlis.theme3bottomnavigation.BottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:bn_backgroundBottomColor="#ffffff"
+        app:bn_countBackgroundColor="@color/colorPrimary"
+        app:bn_countTextColor="#ffffff"
+        app:bn_defaultIconColor="@color/textHeader"
+        app:bn_rippleColor="#2f424242"
+        app:bn_selectedIconColor="@color/colorPrimary"
+        app:bn_shadowColor="#E2E2E2" />
+
+    <include layout="@layout/loading_layout"/>
+
+</RelativeLayout>
