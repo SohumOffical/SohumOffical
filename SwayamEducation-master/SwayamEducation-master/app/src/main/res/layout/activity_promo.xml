@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="dashboard"
+            type="com.sngs.swayam.edu.data.model.Dashboard"/>
+        <variable
+            name="handler"
+            type="com.sngs.swayam.edu.ui.promo.handler.PromoHandler" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.promo.view.PromoActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.promo.view.PromoActivity">
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Create Promo"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:visibility="@{ dashboard.canCreate ? View.VISIBLE : View.GONE }"
+            android:onClick="@{(v) -> handler.onCreatePromoClick(v, dashboard)}"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:id="@+id/view_btn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="View Promos"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:visibility="@{ dashboard.canSearch  ? View.VISIBLE : View.GONE }"
+            android:onClick="@{(v) -> handler.onViewPromosClick(v, dashboard)}"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

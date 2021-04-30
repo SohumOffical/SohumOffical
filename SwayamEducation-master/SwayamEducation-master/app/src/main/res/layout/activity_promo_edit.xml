@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="dashboard"
+            type="com.sngs.swayam.edu.data.model.Dashboard"/>
+        <variable
+            name="position" type="java.lang.Integer" />
+        <variable name="promo"
+            type="com.sngs.swayam.edu.data.model.Promo"/>
+        <variable name="viewmodel"
+            type="com.sngs.swayam.edu.ui.promo.viewmodel.PromoViewModel"/>
+        <variable
+            name="handler"
+            type="com.sngs.swayam.edu.ui.promo.handler.PromoHandler" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.promo.view.PromoEditActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.promo.view.PromoEditActivity">
+
+        <EditText
+            android:id="@+id/txt_title"
+            android:layout_width="370dp"
+            android:layout_height="49dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={promo.title}"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="198dp" />
+
+        <EditText
+            android:id="@+id/txt_price"
+            android:layout_width="378dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={``+promo.price}"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <EditText
+            android:id="@+id/txt_desc"
+            android:layout_width="384dp"
+            android:layout_height="53dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={promo.description}"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <EditText
+            android:id="@+id/txt_owner_name"
+            android:layout_width="382dp"
+            android:layout_height="49dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={promo.owner}"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/updt_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> handler.onUpdateClick(v, viewmodel, promo)}"
+            android:text="Update" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
