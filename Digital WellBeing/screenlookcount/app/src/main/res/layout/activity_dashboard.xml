@@ -16,13 +16,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:weightSum="2"
+        >
 
         <androidx.cardview.widget.CardView
             android:id="@+id/pickups"
             android:layout_width="fill_parent"
-            android:layout_height="150dp"
             android:layout_weight="1"
+            android:layout_height="150dp"
             app:cardCornerRadius="20dp"
             android:layout_margin="10dp">
 

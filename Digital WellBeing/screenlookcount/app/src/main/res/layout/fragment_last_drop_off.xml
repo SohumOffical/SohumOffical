@@ -49,16 +49,16 @@
         <View
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/ic_offscreen"/>
+            android:background="@drawable/ic_sunrise"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The longest duration not using the phone"
+            android:text="The time you start using your phone"
             android:textStyle="bold"
             android:textColor="#fe6e13"
             android:layout_gravity="center"
             android:fontFamily="@font/font"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="5dp"
             android:gravity="center"
             />
 
@@ -112,7 +112,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -157,7 +158,6 @@
                         <View
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/ic_daily"
                             android:layout_marginLeft="10dp"
                             />
 
@@ -221,7 +221,6 @@
                         <View
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/ic_week"
                             android:layout_marginLeft="10dp"
                             />
 
@@ -253,32 +252,33 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_alignParentLeft="true"
-                    android:layout_margin="10dp">
+                    android:layout_weight="1">
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Least"
+                        android:text="Earliest time started using the phone"
                         android:layout_gravity="left"
                         android:layout_marginLeft="50dp"
                         android:layout_marginBottom="5dp"
                         android:textStyle="bold"
                         android:textColor="#fab387"
                         android:fontFamily="@font/font"
-                        android:textSize="18dp"
+                        android:textSize="12dp"
                         />
 
 
@@ -316,6 +316,7 @@
                             android:text=" s"
                             android:textSize="10dp"
                             android:layout_marginBottom="2dp"
+                            android:visibility="gone"
                             />
 
                     </LinearLayout>
@@ -324,26 +325,27 @@
 
 
                 <LinearLayout
-                    android:layout_width="135dp"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp">
+                    >
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Most"
+                        android:text="Latest time started using the phone"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:layout_marginBottom="5dp"
                         android:textStyle="bold"
                         android:textColor="#fab387"
                         android:fontFamily="@font/font"
-                        android:textSize="18dp"
+                        android:textSize="12dp"
                         />
 
 
@@ -381,6 +383,7 @@
                             android:text=" s"
                             android:textSize="10dp"
                             android:layout_marginBottom="2dp"
+                            android:visibility="gone"
                             />
 
                     </LinearLayout>
@@ -388,7 +391,8 @@
                 </LinearLayout>
 
 
-            </RelativeLayout>
+
+            </LinearLayout>
 
 
         </LinearLayout>

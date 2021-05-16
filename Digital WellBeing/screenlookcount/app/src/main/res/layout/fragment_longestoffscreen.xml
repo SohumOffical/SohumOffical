@@ -47,31 +47,20 @@
         >
 
         <View
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/ic_countinuoususe"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_offscreen"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The longest duration using the phone"
+            android:text="The longest duration not using the phone"
             android:textStyle="bold"
             android:textColor="#fe6e13"
             android:layout_gravity="center"
             android:fontFamily="@font/font"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
             />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/gif_file"
-                android:layout_alignParentRight="true"
-                />
-
-        </RelativeLayout>
 
 
     </LinearLayout>
@@ -120,26 +109,20 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-
-                </RelativeLayout>
+                android:orientation="horizontal"
+                android:weightSum="2">
 
 
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_margin="10dp"
                     >
 
                     <TextView
@@ -197,21 +180,21 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="135dp"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp">
+                    >
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="45dp"
+                        android:layout_gravity="center"
                         android:layout_marginBottom="5dp"
                         android:textStyle="bold"
                         android:textColor="#fab387"
@@ -262,21 +245,23 @@
                 </LinearLayout>
 
 
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_alignParentLeft="true"
-                    android:layout_margin="10dp">
+                    android:layout_weight="1"
+                    >
 
 
                     <TextView
@@ -335,13 +320,13 @@
 
 
                 <LinearLayout
-                    android:layout_width="135dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp">
+                    android:layout_weight="1">
 
 
                     <TextView
@@ -399,8 +384,7 @@
                 </LinearLayout>
 
 
-
-            </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
