@@ -64,6 +64,8 @@ class PickupsFragment : BaseFragment(), MainContract.View{
 
         if(c==7){
 
+            series.addPoint(ValueLinePoint(" ", 0.toFloat()))
+
             series.addPoint(ValueLinePoint("Day " + 1, arr[6].toFloat()))
             series.addPoint(ValueLinePoint("Day " + 2, arr[5].toFloat()))
             series.addPoint(ValueLinePoint("Day " + 3, arr[4].toFloat()))
@@ -72,16 +74,7 @@ class PickupsFragment : BaseFragment(), MainContract.View{
             series.addPoint(ValueLinePoint("Day " + 6, arr[1].toFloat()))
             series.addPoint(ValueLinePoint("Day " + 7, arr[0].toFloat()))
 
-
-
-            Log.d("ValueLinePoint",arr[0].toFloat().toString());
-            Log.d("ValueLinePoint",arr[1].toFloat().toString());
-            Log.d("ValueLinePoint",arr[2].toFloat().toString());
-            Log.d("ValueLinePoint",arr[3].toFloat().toString());
-            Log.d("ValueLinePoint",arr[4].toFloat().toString());
-            Log.d("ValueLinePoint",arr[5].toFloat().toString());
-            Log.d("ValueLinePoint",arr[6].toFloat().toString());
-
+            series.addPoint(ValueLinePoint(" ", 0.toFloat()))
 
         }
 

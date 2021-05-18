@@ -91,6 +91,9 @@ class LastDropOffFragment : BaseFragment(), MainContract.View{
 
         var c=1;
 
+
+        series.addPoint(ValueLinePoint(" ", 0.toFloat()))
+
         series.addPoint(ValueLinePoint("Day "+1, arr[6].toFloat()))
         series.addPoint(ValueLinePoint("Day "+2, arr[5].toFloat()))
         series.addPoint(ValueLinePoint("Day "+3, arr[4].toFloat()))
@@ -99,6 +102,7 @@ class LastDropOffFragment : BaseFragment(), MainContract.View{
         series.addPoint(ValueLinePoint("Day "+6, arr[1].toFloat()))
         series.addPoint(ValueLinePoint("Day "+7, arr[0].toFloat()))
 
+        series.addPoint(ValueLinePoint(" ", 0.toFloat()))
 
 
         var mCubicValueLineChart =currentView.cubiclinechart as ValueLineChart

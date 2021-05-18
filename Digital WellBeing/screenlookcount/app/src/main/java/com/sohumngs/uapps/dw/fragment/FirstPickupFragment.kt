@@ -91,6 +91,8 @@ class FirstPickupFragment : BaseFragment(), MainContract.View{
 
         var c=1;
 
+        series.addPoint(ValueLinePoint(" ", 0.toFloat()))
+
         series.addPoint(ValueLinePoint("Day "+1, arr[6].toFloat()))
         series.addPoint(ValueLinePoint("Day "+2, arr[5].toFloat()))
         series.addPoint(ValueLinePoint("Day "+3, arr[4].toFloat()))
@@ -98,6 +100,9 @@ class FirstPickupFragment : BaseFragment(), MainContract.View{
         series.addPoint(ValueLinePoint("Day "+5, arr[2].toFloat()))
         series.addPoint(ValueLinePoint("Day "+6, arr[1].toFloat()))
         series.addPoint(ValueLinePoint("Day "+7, arr[0].toFloat()))
+
+        series.addPoint(ValueLinePoint(" ", 0.toFloat()))
+
 
 
 

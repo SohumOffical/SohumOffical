@@ -220,7 +220,9 @@ class LongestoffscreenFragment : BaseFragment(), MainContract.View{
         val series = ValueLineSeries()
         series.color = -0xa9480f
 
-        var c=1;
+        var c=1
+
+        series.addPoint(ValueLinePoint(" ", 0.toFloat()))
 
         series.addPoint(ValueLinePoint("Day " + 1, arr_1[6].toFloat()))
         series.addPoint(ValueLinePoint("Day " + 2, arr_1[5].toFloat()))
@@ -230,6 +232,7 @@ class LongestoffscreenFragment : BaseFragment(), MainContract.View{
         series.addPoint(ValueLinePoint("Day " + 6, arr_1[1].toFloat()))
         series.addPoint(ValueLinePoint("Day " + 7, arr_1[0].toFloat()))
 
+        series.addPoint(ValueLinePoint(" ", 0.toFloat()))
 
 
         var mCubicValueLineChart =currentView.cubiclinechart as ValueLineChart
