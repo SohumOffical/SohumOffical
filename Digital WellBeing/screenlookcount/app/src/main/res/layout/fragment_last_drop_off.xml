@@ -271,7 +271,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Earliest time started using the phone"
+                        android:text="Earliest time stopped using the phone"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:layout_marginBottom="5dp"
@@ -338,7 +338,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Latest time started using the phone"
+                        android:text="Latest time stopped using the phone"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:layout_marginBottom="5dp"

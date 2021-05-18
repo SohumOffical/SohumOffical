@@ -25,7 +25,7 @@ class FirstPickupFragment : BaseFragment(), MainContract.View{
     var sharedpreferences: SharedPreferences? = null
     var firstuse=0.toLong()
 
-    override fun getContentResource() = R.layout.fragment_last_drop_off
+    override fun getContentResource() = R.layout.fragment_first_pickup
 
     override fun init(view: View, state: Bundle?) {
         currentView = view
