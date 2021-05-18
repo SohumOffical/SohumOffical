@@ -230,7 +230,7 @@ class LongestoffscreenFragment : BaseFragment(), MainContract.View{
         series.addPoint(ValueLinePoint("Day " + 4, arr_1[3].toFloat()))
         series.addPoint(ValueLinePoint("Day " + 5, arr_1[2].toFloat()))
         series.addPoint(ValueLinePoint("Day " + 6, arr_1[1].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 7, arr_1[0].toFloat()))
+        series.addPoint(ValueLinePoint("Today", arr_1[0].toFloat()))
 
         series.addPoint(ValueLinePoint(" ", 0.toFloat()))
 

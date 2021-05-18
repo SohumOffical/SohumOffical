@@ -99,7 +99,7 @@ class FirstPickupFragment : BaseFragment(), MainContract.View{
         series.addPoint(ValueLinePoint("Day "+4, arr[3].toFloat()))
         series.addPoint(ValueLinePoint("Day "+5, arr[2].toFloat()))
         series.addPoint(ValueLinePoint("Day "+6, arr[1].toFloat()))
-        series.addPoint(ValueLinePoint("Day "+7, arr[0].toFloat()))
+        series.addPoint(ValueLinePoint("Today", arr[0].toFloat()))
 
         series.addPoint(ValueLinePoint(" ", 0.toFloat()))
 
