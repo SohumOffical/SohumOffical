@@ -19,25 +19,25 @@
 
 -dontwarn com.gc.materialdesign.views.**
 
--keep public class com.totemsoft.screenlookcount.db.** {
+-keep public class com.sohumngs.uapps.dw.db.** {
   *;
 }
 
--keep public class com.totemsoft.screenlookcount.fragment.** {
+-keep public class com.sohumngs.uapps.dw.fragment.** {
   *;
 }
 
--keep class com.totemsoft.screenlookcount.utils.Utils**
--keepclassmembers class com.totemsoft.screenlookcount.utils.Utils** {
+-keep class com.sohumngs.uapps.dw.utils.Utils**
+-keepclassmembers class com.sohumngs.uapps.dw.utils.Utils** {
     *;
 }
 
--keep class com.totemsoft.screenlookcount.ActivityMain**
--keepclassmembers class com.totemsoft.screenlookcount.ActivityMain** {
+-keep class com.sohumngs.uapps.ActivityMain**
+-keepclassmembers class com.sohumngs.uapps.ActivityMain** {
     *;
 }
 
--keep class com.totemsoft.screenlookcount.calendar.CalendarAdapter**
--keepclassmembers class com.totemsoft.screenlookcount.calendar.CalendarAdapter** {
+-keep class com.sohumngs.uapps.dw.calendar.CalendarAdapter**
+-keepclassmembers class com.sohumngs.uapps.dw.calendar.CalendarAdapter** {
     *;
 }

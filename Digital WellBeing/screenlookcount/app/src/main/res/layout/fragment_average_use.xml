@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
-    tools:context=".ActivityMain"
+    tools:context=".dw.ActivityMain"
     android:orientation="vertical">
 
-    <com.totemsoft.screenlookcount.utils.CircleButton
+    <com.sohumngs.uapps.dw.utils.CircleButton
         android:id="@+id/b_main_look"
         style="@style/ButtonLookText"
         android:layout_width="@dimen/big_button_width"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"/>
 
-    <com.totemsoft.screenlookcount.utils.CircleButton
+    <com.sohumngs.uapps.dw.utils.CircleButton
         android:id="@+id/b_unlock_look"
         style="@style/ButtonUnlockText"
         android:layout_width="@dimen/small_button_width"

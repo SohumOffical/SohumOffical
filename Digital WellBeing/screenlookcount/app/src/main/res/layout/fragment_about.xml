@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/activity_vertical_margin"
-    tools:context=".ActivityMain">
+    tools:context=".dw.ActivityMain">
 
     <TextView
         android:id="@+id/tv_about_title"
@@ -84,7 +84,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_about_unlocks_number"
         app:layout_constraintTop_toTopOf="@+id/tv_about_unlocks_number" />
 
-    <com.totemsoft.screenlookcount.utils.RoundedImageView
+    <com.sohumngs.uapps.dw.utils.RoundedImageView
         android:id="@+id/iv_me"
         android:layout_width="@dimen/me_circle_size"
         android:layout_height="@dimen/me_circle_size"
