@@ -2,6 +2,7 @@ package com.totemsoft.screenlookcount.fragment.main
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.annotation.RequiresApi
 import com.totemsoft.screenlookcount.BaseFragment
@@ -20,6 +21,8 @@ class PickupsFragment : BaseFragment(), MainContract.View{
     private lateinit var currentView: View
     private lateinit var presenter: MainPresenter
     val series = ValueLineSeries()
+    var c=0;
+
 
 
     override fun getContentResource() = R.layout.fragment_pickups
@@ -36,7 +39,6 @@ class PickupsFragment : BaseFragment(), MainContract.View{
         context?.let {
             val nowDateString = Date();
             presenter.setCountersValues(it, nowDateString, "pickups")
-
 
         }
 
@@ -59,15 +61,34 @@ class PickupsFragment : BaseFragment(), MainContract.View{
 
         series.color = -0xa9480f
 
-        var c=1;
+        c++;
 
-        series.addPoint(ValueLinePoint("Day " + 1, arr[6].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 2, arr[5].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 3, arr[4].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 4, arr[3].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 5, arr[2].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 6, arr[1].toFloat()))
-        series.addPoint(ValueLinePoint("Day " + 7, arr[0].toFloat()))
+        if(c==7){
+
+            series.addPoint(ValueLinePoint("Day " + 1, arr[6].toFloat()))
+            series.addPoint(ValueLinePoint("Day " + 2, arr[5].toFloat()))
+            series.addPoint(ValueLinePoint("Day " + 3, arr[4].toFloat()))
+            series.addPoint(ValueLinePoint("Day " + 4, arr[3].toFloat()))
+            series.addPoint(ValueLinePoint("Day " + 5, arr[2].toFloat()))
+            series.addPoint(ValueLinePoint("Day " + 6, arr[1].toFloat()))
+            series.addPoint(ValueLinePoint("Day " + 7, arr[0].toFloat()))
+
+
+
+            Log.d("ValueLinePoint",arr[0].toFloat().toString());
+            Log.d("ValueLinePoint",arr[1].toFloat().toString());
+            Log.d("ValueLinePoint",arr[2].toFloat().toString());
+            Log.d("ValueLinePoint",arr[3].toFloat().toString());
+            Log.d("ValueLinePoint",arr[4].toFloat().toString());
+            Log.d("ValueLinePoint",arr[5].toFloat().toString());
+            Log.d("ValueLinePoint",arr[6].toFloat().toString());
+
+
+        }
+
+
+
+
 
 
 

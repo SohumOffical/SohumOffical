@@ -1,27 +1,13 @@
 package com.totemsoft.screenlookcount
 
-import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.TextView
-import androidx.annotation.RequiresApi
 import com.totemsoft.screenlookcount.background.LookCounterService
-import com.totemsoft.screenlookcount.db.ScreenCounterDb
-import com.totemsoft.screenlookcount.fragment.about.FragmentAbout
 import com.totemsoft.screenlookcount.fragment.main.AverageUseFragment
-import com.totemsoft.screenlookcount.fragment.main.FragmentMain
-import com.totemsoft.screenlookcount.fragment.main.PickupsFragment
 import com.totemsoft.screenlookcount.utils.*
 import kotlinx.android.synthetic.main.activity_main.sv_container
 import kotlinx.android.synthetic.main.activity_pickups.*
-import java.util.*
 
 
 class AverageUse : AppCompatActivity() {

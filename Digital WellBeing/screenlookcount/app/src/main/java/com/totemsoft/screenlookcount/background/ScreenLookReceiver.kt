@@ -99,6 +99,8 @@ class ScreenLookReceiver : BroadcastReceiver() {
                                                     //pikups
                                                     screenon =if (screenon != null) screenon!!.plus(screenOnCount) else 0
 
+                                                    Log.d("screenoncounter"," "+screenon);
+
 
                                                     //totaltime count(average use)
                                                     if(time.toInt()/(24*60*60*1000)<5){

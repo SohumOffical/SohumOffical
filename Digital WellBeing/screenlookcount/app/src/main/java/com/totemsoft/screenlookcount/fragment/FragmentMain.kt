@@ -1,4 +1,4 @@
-package com.totemsoft.screenlookcount.fragment.main
+package com.totemsoft.screenlookcount.fragment
 
 import android.os.Build
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.View
 import androidx.annotation.RequiresApi
 import com.totemsoft.screenlookcount.BaseFragment
 import com.totemsoft.screenlookcount.R
+import com.totemsoft.screenlookcount.fragment.main.MainContract
+import com.totemsoft.screenlookcount.fragment.main.MainPresenter
 import kotlinx.android.synthetic.main.fragment_main.view.*
 import org.eazegraph.lib.charts.ValueLineChart
 import org.eazegraph.lib.models.ValueLinePoint
@@ -19,7 +21,7 @@ import java.util.*
  *
  * @author Antonina
  */
-class FragmentMain : BaseFragment(), MainContract.View{
+class FragmentMain : BaseFragment(), MainContract.View {
 
     private lateinit var currentView: View
     private lateinit var presenter: MainPresenter
@@ -51,12 +53,69 @@ class FragmentMain : BaseFragment(), MainContract.View{
 
         if(type.equals("total")){
 
-            currentView.total.text = (looks ?: 0).toString()
+            var p1: Int = looks?.rem(60) ?: 0
+            var p2: Int = looks?.div(60) ?: 0
+            var p3 = p2 % 60
+            p2 = p2 / 60
+
+            if(p3==0&&p2==0){
+                currentView.total.text = ""+p1+"s"
+            }else if(p2==0){
+
+                currentView.total.text = ""+p3+"min "+p1+"s"
+
+            }else if(p3==0){
+                currentView.total.text = ""+p2
+            }
+
+            else{
+
+                currentView.total.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+            }
 
 
-            currentView.min.text =min.toString()
+            p1 = min?.rem(60) ?: 0
+            p2 = min?.div(60) ?: 0
+            p3 = p2 % 60
+            p2 = p2 / 60
 
-            currentView.max.text =max.toString()
+            if(p3==0&&p2==0){
+                currentView.min.text = ""+p1+"s"
+            }else if(p2==0){
+
+                currentView.min.text = ""+p3+"min "+p1+"s"
+
+            }else if(p3==0){
+                currentView.min.text = ""+p2
+            }
+
+            else{
+
+                currentView.min.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+            }
+
+            p1 = max?.rem(60) ?: 0
+            p2 = max?.div(60) ?: 0
+            p3 = p2 % 60
+            p2 = p2 / 60
+
+            if(p3==0&&p2==0){
+                currentView.max.text = ""+p1+"s"
+            }else if(p2==0){
+
+                currentView.max.text = ""+p3+"min "+p1+"s"
+
+            }else if(p3==0){
+                currentView.max.text = ""+p2
+            }
+
+            else{
+
+                currentView.max.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+            }
 
             val series = ValueLineSeries()
             series.color = -0xa9480f
@@ -80,10 +139,35 @@ class FragmentMain : BaseFragment(), MainContract.View{
 
         }else if(type.equals("today")){
 
-                try {
-                    currentView.dailyaverage.text = (min / max).toString()
+                try
+                {
+
+                   var looks_1=min / max
+
+                    val p1: Int = looks_1?.rem(60) ?: 0
+                    var p2: Int = looks_1?.div(60) ?: 0
+                    val p3 = p2 % 60
+                    p2 = p2 / 60
+
+                    if(p3==0&&p2==0){
+                        currentView.dailyaverage.text = ""+p1+"s"
+                    }else if(p2==0){
+
+                        currentView.dailyaverage.text = ""+p3+"min "+p1+"s"
+
+                    }else if(p3==0){
+                        currentView.dailyaverage.text = ""+p2
+                    }
+
+                    else{
+
+                        currentView.dailyaverage.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+                    }
+
+
                 }catch (e:Exception){
-                    currentView.dailyaverage.text = ""
+                    currentView.dailyaverage.text = "0s"
 
                 }
 

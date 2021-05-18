@@ -49,11 +49,11 @@
         <View
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/ic_sunrise"/>
+            android:background="@drawable/ic_sleep"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The time you start using your phone"
+            android:text="The time you stop using your phone"
             android:textStyle="bold"
             android:textColor="#fe6e13"
             android:layout_gravity="center"
@@ -260,20 +260,20 @@
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_alignParentLeft="true"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    >
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Earliest time started using the phone"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_marginBottom="5dp"
                         android:textStyle="bold"
                         android:textColor="#fab387"

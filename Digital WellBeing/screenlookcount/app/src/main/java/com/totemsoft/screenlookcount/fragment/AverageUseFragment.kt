@@ -45,15 +45,102 @@ class AverageUseFragment : BaseFragment(), MainContract.View{
     override fun setCountersView(looks: Int?, type: String?, min: Int, max: Int, arr: IntArray) {
 
 
-        currentView.total.text = (looks ?: 0).toString()
+        var p1: Int = looks?.rem(60) ?: 0
+        var p2: Int = looks?.div(60) ?: 0
+        var p3 = p2 % 60
+        p2 = p2 / 60
 
-        if (looks != null) {
-            currentView.dailyaverage.text =(looks/7).toString()
+        if(p3==0&&p2==0){
+            currentView.total.text = ""+p1+"s"
+        }else if(p2==0){
+
+            currentView.total.text = ""+p3+"min "+p1+"s"
+
+        }else if(p3==0){
+            currentView.total.text = ""+p2
         }
 
-        currentView.min.text =min.toString()
+        else{
 
-        currentView.max.text =max.toString()
+            currentView.total.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+        }
+
+
+
+        if (looks != null) {
+
+           var looks_1=looks/7;
+
+
+
+            val p1: Int = looks_1?.rem(60) ?: 0
+            var p2: Int = looks_1?.div(60) ?: 0
+            val p3 = p2 % 60
+            p2 = p2 / 60
+
+            if(p3==0&&p2==0){
+                currentView.dailyaverage.text = ""+p1+"s"
+            }else if(p2==0){
+
+                currentView.dailyaverage.text = ""+p3+"min "+p1+"s"
+
+            }else if(p3==0){
+                currentView.dailyaverage.text = ""+p2
+            }
+
+            else{
+
+                currentView.dailyaverage.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+            }
+
+
+        }
+
+
+
+        p1 = min?.rem(60) ?: 0
+        p2 = min?.div(60) ?: 0
+        p3 = p2 % 60
+        p2 = p2 / 60
+
+        if(p3==0&&p2==0){
+            currentView.min.text = ""+p1+"s"
+        }else if(p2==0){
+
+            currentView.min.text = ""+p3+"min "+p1+"s"
+
+        }else if(p3==0){
+            currentView.min.text = ""+p2
+        }
+
+        else{
+
+            currentView.min.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+        }
+
+        p1 = max?.rem(60) ?: 0
+        p2 = max?.div(60) ?: 0
+        p3 = p2 % 60
+        p2 = p2 / 60
+
+        if(p3==0&&p2==0){
+            currentView.max.text = ""+p1+"s"
+        }else if(p2==0){
+
+            currentView.max.text = ""+p3+"min "+p1+"s"
+
+        }else if(p3==0){
+            currentView.max.text = ""+p2
+        }
+
+        else{
+
+            currentView.max.text = ""+p2+"hr "+""+p3+"min "+p1+"s"
+
+        }
 
 
         val series = ValueLineSeries()
