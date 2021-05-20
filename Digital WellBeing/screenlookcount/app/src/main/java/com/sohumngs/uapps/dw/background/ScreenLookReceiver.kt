@@ -101,13 +101,13 @@ class ScreenLookReceiver : BroadcastReceiver() {
 
 
                                                     //totaltime count(average use)
-                                                    if(time.toInt()/(24*60*60*1000)<5){
+                                                    if((time.toInt()/(24*60*60*1000)<5)&&time>0){
                                                         screenoff = if (screenoff != null) screenoff!!.plus(Math.round((time/1000).toFloat())) else 0
                                                     }
 
 
                                                     //totaltime count
-                                                    if(time.toInt()/(24*60*60*1000)<5){
+                                                    if((time.toInt()/(24*60*60*1000)<5)&&time>0){
 
                                                         screenoff = if (screenoff != null) screenoff!!.plus(Math.round((time/1000).toFloat())) else 0
 

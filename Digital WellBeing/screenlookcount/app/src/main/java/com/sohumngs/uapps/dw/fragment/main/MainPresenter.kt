@@ -47,14 +47,12 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
 
             var arr: LongArray= longArrayOf(0,1,2,3,4,5,6)
 
-
             var x=0;
             var min=0.toLong()
             var max=0.toLong()
             var date: LocalDate = LocalDate.now().minusDays(0)
             var date_1 = Date.from(date.atStartOfDay(ZoneId.systemDefault()).toInstant())
             var data=ArrayList<Long>()
-
 
             ScreenCounterDb.getDatabase(context as AppCompatActivity)
                     .getDayLook(date_1.toPatternString(context))
@@ -985,9 +983,18 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[0]=arr_1[0]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[0]=arr_1[0]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
                                     }catch (e:Exception){
 
                                     }
@@ -1083,9 +1090,17 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[1]=arr_1[1]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[1]=arr_1[1]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
 
                                     }catch (e:Exception){
 
@@ -1183,9 +1198,17 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[2]=arr_1[2]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[2]=arr_1[2]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
 
                                     }catch (e:Exception){
 
@@ -1282,9 +1305,17 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[3]=arr_1[3]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[3]=arr_1[3]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
 
                                     }catch (e:Exception){
 
@@ -1381,9 +1412,17 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[4]=arr_1[4]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[4]=arr_1[4]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
 
                                     }catch (e:Exception){
 
@@ -1480,9 +1519,17 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[5]=arr_1[5]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[5]=arr_1[5]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
 
                                     }catch (e:Exception){
 
@@ -1579,9 +1626,17 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
                                 for (item in data_1) {
 
                                     try {
-                                        diff.add(((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt())
+
+                                        var temp = ((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        if(temp>0){
+
+                                            diff.add(temp)
+                                            arr_1[6]=arr_1[6]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
+
+                                        }
+
                                         i=i+2
-                                        arr_1[6]=arr_1[6]+((data_1.get(i + 2) - data_1.get(i + 1))/1000).toInt()
 
                                     }catch (e:Exception){
 
